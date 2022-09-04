@@ -29,7 +29,7 @@
         <h1 class="welcome-hero">
           Howdy, friend.<span class="second"> <br> I'm Eric</span>.
         </h1>
-        <p class="welcome-text">I'm a front-end developer who loves building <span class="ayo">{results[0]}</span> UI. 
+        <p class="welcome-text">I'm a front-end developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> UI. 
            I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
         
            <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/edit?usp=sharing"><button class="primary">View my resume.</button></a>
@@ -150,7 +150,7 @@
         text-shadow: none;
     } */
 
-    .ayo{
+    .descrip{
   
         animation-duration: 5s;
 
