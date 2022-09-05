@@ -3,9 +3,11 @@
   import pic from './assets/eric.png'
   import Counter from './lib/Counter.svelte'
   import Hero from './lib/Hero.svelte'
+  import Nav from './lib/nav.svelte'
 </script>
 
 <main>
+  <Nav />
   <Hero />
 <!-- 
   <Counter /> -->

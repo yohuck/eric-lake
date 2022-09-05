@@ -24,30 +24,32 @@
     }
 </script>
 
-<section>
-    <div class="grp">
-        <h1 class="welcome-hero">
-          Howdy, friend.<span class="second"> <br> I'm Eric</span>.
-        </h1>
-        <p class="welcome-text">I'm a front-end developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> UI. 
-           I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
-        
-           <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/edit?usp=sharing"><button class="primary">View my resume.</button></a>
-    </div>
-
-    <div class="circle-3">
-
-    </div>
-    <div class="photo">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
-   
-
-
-
-</section>
+<div class="container">
+    <section>
+        <div class="grp">
+            <h1 class="welcome-hero">
+              Howdy, friend.<span class="second"> <br> I'm Eric</span>.
+            </h1>
+            <p class="welcome-text">I'm a front-end developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> UI.
+               I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
+    
+               <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/edit?usp=sharing"><button class="primary">View my resume.</button></a>
+        </div>
+    
+        <div class="circle-3">
+    
+        </div>
+        <div class="photo">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    
+    
+    
+    
+    </section>
+</div>
 
 
 
@@ -56,79 +58,90 @@
 @import "open-props/normalize";
 @import "open-props/masks/edges";
 
+.container{
+    background-image: var(--gradient-16);
+}
+
 .grp{
     width: 100%;
 }
 
 
-    h1{
- 
-         color: var(--grape-8);
-         line-height: var(--font-lineheight-1);
-  font-size: var(--font-size-8);
-  font-weight: var(--font-weight-9);
-  font-family: var(--font-sans);
-  margin-bottom: 0;
-  text-shadow: 2px 3px 1px var(--blue-2);
-    }
+h1{
+    color: var(--violet-7);
+    line-height: var(--font-lineheight-1);
+    font-size: var(--font-size-8);
+    font-weight: var(--font-weight-9);
+    font-family: var(--font-sans);
+    margin-bottom: 0;
+    text-shadow: 2px 3px 1px var(--blue-2);
+}
 
-    .welcome-text{
-        position: relative;
-        color: var(--red-0);
-        word-wrap: break-word;
-        line-height: var(--font-lineheight-2);
-        font-size: var(--font-size-2);
-        font-weight: var(--font-weight-3);
-    }
+.welcome-text{
+    position: relative;
+    color: var(--red-0);
+    word-wrap: break-word;
+    line-height: var(--font-lineheight-2);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-3);
+}
 
+.photo{
+    width: 60%;
+    max-width: 500px;
+    margin-right: var(--size-10);
+    margin-top: var(--size-4);
+    aspect-ratio: 1;
+    animation: grad 20s linear 0s infinite alternate none;
+    position: relative;
+    background-position-x:0px;
+    background-image: var(--gradient-2);
+    filter: var(--noise-filter-2);
+    background-size: 2000px 2000px;
+    border-radius: 999px;
+    z-index: 7;
+    opacity: 1;
+    display: grid;
+    place-items: center;
+}
 
-
-    .photo{
-        width: 70%;
-
-        margin-right: var(--size-10);
-        aspect-ratio: 1;
-        animation: grad 7s linear 0s infinite alternate none;
-        position: relative;
-
-        background-position-x:0px;
-        background-image: var(--gradient-2);
-        background-size: 2000px 2000px;
-        border-radius: 999px;
-        z-index: 7;
-        opacity: 1;
-    }
-
-    .circle{
-        width: 140%;
-        aspect-ratio: 10;
-        transform-origin: center;
-        transform: translateX(-15%)translateY(200%) rotate(10deg);
-        border-top: 3px dashed var(--yellow-4);
-        border-left: 1px dashed var(--blue-4);
-        border-right: 1px dashed var(--blue-6);
-        border-radius: 50%;
-        z-index: 2;
-        mask-clip:  unset;
-        animation: round 5s linear 0s infinite running none;
-        /* background-color: var(--grape-9); */
-        opacity: 1;
-    }
+.circle{
+    width: 115%;
+    aspect-ratio: 10;
+    /* transform-origin: center; */
+    transform: rotate(0deg);
+    border-top: 3px dotted var(--yellow-4);
+    border-left: 1px dashed var(--blue-4);
+    border-right: 1px dashed var(--blue-6);
+    border-radius: 50%;
+    z-index: 200;
+    mask-clip:  unset;
+    animation: round 27s linear 0s infinite running none;
+    opacity: 0.6;
+    position: relative;
+}
 
     .circle:nth-of-type(odd){
-        border-top: 8px dotted var(--blue-2);
-        border-left: 3px dashed var(--yellow-4);
-        border-right: 8px dotted var(--blue-6);
+        width: 90%;
+        /* position: absolute;
+        top: 0;
+        left: 0; */
+        border-top: 2px dotted var(--pink-2);
+        border-left: 2px dashed var(--pink-4);
+        border-right: 2x dotted var(--pink-6);
         animation: roundy 30s linear 0s infinite running none;
-        transform: translateX(-15%)translateY(150%) rotate(10deg);
+        /* transform: translateX(-15%)translateY(150%) rotate(10deg); */
     }
     .circle:nth-of-type(1){
-        border-top: 5px dotted var(--blue-2);
-        border-left: 5px dotted var(--blue-4);
-        border-right: 5px dotted var(--blue-6);
+        /* position: absolute;
+        top: 0;
+        left: 0; */
+        border-top: 7px dotted var(--pink-2);
+        border-left: 7px dashed var(--pink-4);
+        border-right: 7px dotted var(--pink-6);
         animation: roundy 7s linear 0s infinite running none;
 
-        transform: translateX(-15%)translateY(320%) rotate(10deg);
+        /* transform: translateX(-15%)translateY(320%) rotate(10deg); */
 
     }
 
@@ -158,7 +171,7 @@
         display: inline-block;
         width: 9ch;
         /* background-color: var(--gray-9); */
-        color: var(--grape-8);
+        color: var(--violet-7);
         font-weight: var(--font-weight-9);
     }
     .ayo1{
@@ -169,50 +182,52 @@
   display: inline-block;
   width: 8ch;
   /* background-color: var(--gray-9); */
-  color: var(--grape-8);
+  color: var(--violet-7);
   font-weight: var(--font-weight-9);
 }
 
     section{
-        /* max-width: 900px; */
+        max-width: 1500px;
         height: 100vh;
         margin: 0 auto;
+        gap: var(--size-4);
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
 
         padding: var(--size-10);
-        background-color: var(--cyan-0);
+     
         line-height: var(--font-lineheight-0);
         /* -webkit-mask: var(--mask-edge-drip-bottom); */
    
-  background-image: var(--gradient-16);
+
 
 
     }
 
     button {
   background: white;
-  color: var(--indigo-8);
+  color: var(--violet-7);
   font-size: var(--font-size-3);
-  padding-inline: var(--size-8);
+  padding-inline: var(--size-5);
   padding-block: var(--size-3);
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
-  margin-top: var(--size-5);
+  margin-top: var(--size-3);
 }
 
 button.primary {
-  background: var(--indigo-8);
+  background: var(--violet-7);
   font-weight: var(--font-weight-7);
   text-shadow: 0 1px 0 var(--red-2);
   color: white;
+  
 }
 
 button.primary:hover {
-  background: var(--grape-8);
-  color: var(--indigo-1);
+  background: var(--violet-6);
+  color: var(--indigo-0);
   text-shadow: none;
 }
 
@@ -225,12 +240,12 @@ button.primary:hover {
     }
     47% {
         background-position: 0px 0px;
-        transform:  rotate(2deg);
+        transform:  rotate(-360deg);
     }
     76% {
     }
     100% {
-        background-position: -100px -00px;
+        background-position: 00px -00px;
     }
 }
 
@@ -239,13 +254,17 @@ button.primary:hover {
         border-top: 8px dotted var(--blue-4);
         border-left: 8px dotted var(--blue-6);
         border-right: 8px dotted var(--blue-8);
+
     }
     22% {
     }
     47% {
-
+        transform:  rotate(360deg);
     }
     76% {
+        border-top: 4px dotted var(--blue-4);
+        border-left: 4px dotted var(--blue-6);
+        border-right: 4px dotted var(--blue-8);
     }
     100% {
 
@@ -254,23 +273,40 @@ button.primary:hover {
 
 @keyframes roundy{
     0% {
-        border-top: 4px dashed var(--blue-3);
-        border-left: 4px dashed var(--blue-6);
-        border-right: 4px dashed var(--blue-8);
-    }
-    22% {
-    }
-    47% {
+        border-top: 10px dotted var(--blue-3);
+        border-left: 10px dotted var(--blue-6);
+        border-right: 10px dotted var(--blue-8);
 
     }
-    76% {
-        border-top: 4px dashed var(--blue-5);
-        border-left: 4px dashed var(--blue-6);
-        border-right: 4px dotted var(--blue-8);
+    22% {
+        border-top: 2px dotted var(--indigo-5);
+        border-left: 2px dotted var(--indigo-6);
+        border-right: 2px dotted var(--indigo-8);
+    }
+    47% {
+        transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+
+    }
+    50% {
+        border-top: 5px dotted var(--indigo-5);
+        border-left: 5px dotted var(--indigo-6);
+        border-right: 5px dotted var(--indigo-8);
     }
     100% {
 
     }
 }
+
+@media (max-width: 800px){
+    section{
+        flex-direction: column-reverse;
+    }
+
+    .photo{
+        margin:var(--size-3)0;
+    }
+}
+
+
 
 </style>
