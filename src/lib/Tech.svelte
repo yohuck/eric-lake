@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <section>
         <h2>Tech Stack</h2>
 
@@ -20,7 +20,7 @@
             </li>
         </ul>
     </section>
-</div>
+</div> -->
 
 <style>
 ul{

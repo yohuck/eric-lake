@@ -33,7 +33,7 @@
             <p class="welcome-text">I'm a front-end developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> UI.
                I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
     
-               <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/edit?usp=sharing"><button class="primary">View my resume.</button></a>
+      <button class="primary">View my resume.</button>
         </div>
     
         <div class="circle-3">
@@ -74,7 +74,13 @@ h1{
     font-weight: var(--font-weight-9);
     font-family: var(--font-sans);
     margin-bottom: 0;
-    text-shadow: 2px 3px 1px var(--blue-2);
+    /* text-shadow: 2px 3px 1px var(--blue-2); */
+    background-image: var(--gradient-2);
+    filter: var(--noise-filter-3);
+    background-size: 1000px;
+
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .welcome-text{
@@ -207,7 +213,7 @@ h1{
     }
 
     button {
-  background: white;
+  /* background: white; */
   color: var(--violet-7);
   font-size: var(--font-size-3);
   padding-inline: var(--size-5);
@@ -215,19 +221,24 @@ h1{
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
   margin-top: var(--size-3);
+  user-select: none;
+}
+
+a{
+    user-select: none;
 }
 
 button.primary {
   background: var(--violet-7);
-  font-weight: var(--font-weight-7);
-  text-shadow: 0 1px 0 var(--red-2);
-  color: white;
-  
+font-weight: var(--font-weight-7);
+text-shadow: 0 1px 0 var(--red-2);
+color: white;
+border: 4px solid var(--violet-6);
 }
 
 button.primary:hover {
-  background: var(--violet-6);
-  color: var(--indigo-0);
+  background: var(--violet-5);
+  color: var(--violet-0);
   text-shadow: none;
 }
 

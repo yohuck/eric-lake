@@ -18,14 +18,14 @@ nav{
     width: 100%;
     position: fixed;
     z-index: 10000;
-    animation: grad 20s linear 0s infinite alternate none;
+    animation: grad 10s linear 0s infinite alternate none;
 }
 
 nav ul{
     text-align: center;
     padding: var(--size-1);
     margin: var(--size-1);
-    max-width: 1500px;
+    /* max-width: 1500px; */
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
