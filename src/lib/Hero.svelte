@@ -6,6 +6,10 @@
     let results = [ui, customer]
     let choices = [uiChoices, customerChoices]
 
+    const resumeButton = () => {
+        window.open('https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/', '_blank');
+    }
+
     const ticker = (index) => {
         let choice = 0
         results[index] = choices[index][choice]
@@ -33,7 +37,7 @@
             <p class="welcome-text">I'm a front-end developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> UI.
                I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
     
-      <button class="primary">View my resume.</button>
+      <button class="primary" on:click={resumeButton}>View my resume.</button>
         </div>
     
         <div class="circle-3">

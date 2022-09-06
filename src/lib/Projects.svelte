@@ -5,7 +5,7 @@ import Card from "./Card.svelte"
 
 <section>
    
-    <article>
+    <article >
         <div class="info">
             <h4>Habit Stack</h4>
             <hr>
@@ -86,7 +86,9 @@ import Card from "./Card.svelte"
 </section>
 
 <style>
-
+    .dbl{
+       grid-column: span 2;
+    }
     .pop{
         display: flex;
         justify-content: center;

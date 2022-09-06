@@ -9,7 +9,7 @@
 </script>
 
 <main>
-  <Nav />
+  <!-- <Nav /> -->
   <Hero />
   <Projects />
   <Tech />
