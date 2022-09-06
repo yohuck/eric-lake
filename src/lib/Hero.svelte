@@ -276,6 +276,7 @@ button.primary:hover {
         border-top: 10px dotted var(--blue-3);
         border-left: 10px dotted var(--blue-6);
         border-right: 10px dotted var(--blue-8);
+        transform: rotate(360 0 0);
 
     }
     22% {
@@ -284,6 +285,7 @@ button.primary:hover {
         border-right: 2px dotted var(--indigo-8);
     }
     47% {
+        transform: rotate(0 0 0);
         transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
 
     }
@@ -307,6 +309,72 @@ button.primary:hover {
     }
 }
 
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin3D {
+  from {
+    transform: rotate3d(.5,.5,.5, 360deg);
+  }
+  to{
+    transform: rotate3d(0deg);
+  }
+}
+
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes configure-xclockwise {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-135deg);
+  }
+  75% {
+    transform: rotate(-225deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: .25;
+    transform: scale(.75);
+  }
+}
 
 
 </style>
