@@ -10,8 +10,8 @@ import Card from "./Card.svelte"
             <h4>Habit Stack</h4>
             <hr>
             <div class="grp">
-                <a href="github.com">GitHub Repo</a>
-                <a href="github.com">Live Site</a>
+                <a href="https://github.com/yohuck/habit-map" target="_blank">GitHub Repo</a>
+                <a href="https://habitstack.herokuapp.com/" target="_blank">Live Site</a>
             </div>
             <p>A full stack application that helps build habit that stick through repetition and reward.</p>
             <ul>
@@ -64,7 +64,7 @@ import Card from "./Card.svelte"
             <h4>Popper Toy</h4>
             <hr>
             <div class="grp">
-                <a target='blank' href="https://github.com/yohuck/wish-cycle">Codepen</a>
+                <a target='blank' href="https://codepen.io/yohuck/pen/bGaLKaW">Codepen</a>
             </div>
         </div>
         <Popper />
@@ -75,7 +75,7 @@ import Card from "./Card.svelte"
             <h4>Chip Card Button</h4>
             <hr>
             <div class="grp">
-                <a target='blank' href="https://github.com/yohuck/wish-cycle">CodePen</a>
+                <a target='blank' href="https://codepen.io/yohuck/pen/dyJZXxQ">CodePen</a>
             </div>
         </div>
         <Card />
