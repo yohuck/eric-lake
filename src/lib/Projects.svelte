@@ -80,42 +80,7 @@ import Card from "./Card.svelte"
         </div>
         <Card />
     </article>
-    <article>
-        <div class="info">
-            <h4>Recycle Better</h4>
-            <hr>
-            <div class="grp">
-                <a target='blank' href="https://github.com/yohuck/wish-cycle">GitHub Repo</a>
-                <a target="blank" href="https://yohuck.github.io/wish-cycle/">Live Site</a>
-            </div>
-            <p>A full stack application that helps build habit that stick through repetition and reward.</p>
-            <ul>
-                <li>JQuery</li>
-                <li>Socrate Open API</li>
-                <li>Geolocation API</li>
-                <li>Bulma</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-    </article>
-    <article>
-        <div class="info">
-            <h4>Recycle Better</h4>
-            <hr>
-            <div class="grp">
-                <a target='blank' href="https://github.com/yohuck/wish-cycle">GitHub Repo</a>
-                <a target="blank" href="https://yohuck.github.io/wish-cycle/">Live Site</a>
-            </div>
-            <p>A full stack application that helps build habit that stick through repetition and reward.</p>
-            <ul>
-                <li>JQuery</li>
-                <li>Socrate Open API</li>
-                <li>Geolocation API</li>
-                <li>Bulma</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-    </article>
+
 
 
 </section>

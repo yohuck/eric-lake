@@ -75,12 +75,12 @@ h1{
     font-family: var(--font-sans);
     margin-bottom: 0;
     /* text-shadow: 2px 3px 1px var(--blue-2); */
-    background-image: var(--gradient-2);
+    /* background-image: var(--gradient-2);
     filter: var(--noise-filter-3);
     background-size: 1000px;
 
     -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .welcome-text{
