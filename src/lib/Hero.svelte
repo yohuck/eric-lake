@@ -87,7 +87,7 @@ h1{
 }
 
 .photo{
-    width: 60%;
+    width: 40%;
     max-width: 500px;
     margin-right: var(--size-10);
     margin-top: var(--size-4);
@@ -196,7 +196,7 @@ h1{
         justify-content: center;
         align-items: center;
 
-        padding: var(--size-10);
+        padding: var(--size-7);
      
         line-height: var(--font-lineheight-0);
         /* -webkit-mask: var(--mask-edge-drip-bottom); */
