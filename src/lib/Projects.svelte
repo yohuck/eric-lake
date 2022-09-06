@@ -35,17 +35,13 @@
 
 <style>
     section{
- 
-
-
         background-color: var(--violet-7);
-  background-size: cover;
+        background-size: cover;
         padding: var(--size-3);
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
         grid-gap: var(--size-2);
-
     }
 
     .info{
