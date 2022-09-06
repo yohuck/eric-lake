@@ -36,8 +36,8 @@ ul ul{
 }
 
 ul ul li{
-width: 7rem;
-height: 7rem;
+width: 2rem;
+height: 2rem;
 padding: var(--size-2);
 margin: var(--size-2);
 border-radius: var(--border-radius-3);
