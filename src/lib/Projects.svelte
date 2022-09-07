@@ -105,9 +105,10 @@ import Card from "./Card.svelte"
 
     section{
         background-image: var(--gradient-2);
-    background-size: 3000px 3000px;
-
-
+        background-size: 3000px 3000px;
+        max-width: 100vw;
+        overflow: hidden;
+        
         padding: var(--size-3);
         width: 100%;
         display: grid;
@@ -145,7 +146,7 @@ import Card from "./Card.svelte"
         
         border: 1px solid black;
         border-radius: var(--radius-conditional-3);
-        padding: var(--size-3);
+        padding: var(--size-2);
         box-shadow: var(--shadow-3);
         border: var(--border-size-3) solid transparent                      ;
         color: var(--violet-2)

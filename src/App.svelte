@@ -6,13 +6,14 @@
   import Nav from './lib/nav.svelte'
   import Tech from './lib/Tech.svelte';
   import Projects from './lib/Projects.svelte';
+  import PlanetNav from './lib/PlanetNav.svelte';
 </script>
 
 <main>
-  <!-- <Nav /> -->
+  <PlanetNav />
   <Hero />
   <Projects />
-  <Tech />
+  <!-- <Tech /> -->
   
 <!-- 
   <Counter /> -->

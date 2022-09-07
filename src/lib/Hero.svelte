@@ -9,6 +9,29 @@
     const resumeButton = () => {
         window.open('https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/', '_blank');
     }
+    let status = '';
+
+let value = ''
+    const handleClick = async () => {
+    console.log(value)
+    
+    
+    const response = await fetch('https://svelte-sms-8332.twil.io/sms', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            to: value,
+            message: 'Thanks for checking out my portfolio! http://www.ericallenlake.com -E'
+        })
+    });
+    
+    const data = await response.json();
+    // status = data.status;
+    value = 'Check your phone!'
+    }
 
     const ticker = (index) => {
         let choice = 0
@@ -36,8 +59,21 @@
             </h1>
             <p class="welcome-text">I'm a front-end developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> UI.
                I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
-    
-      <button class="primary" on:click={resumeButton}>View my resume.</button>
+              
+               <p class="welcome-text">
+                Want to check out my resume? Download it <a download href=".\public\images\EricLakeResume.pdf">here</a>.
+            </p>
+            <br>
+            <div class="mobile">
+                <p class="welcome-text">
+                    All of my work is implemented mobile-first. Want to view on your phone?
+                </p>
+                <form action="" method="">
+                    <input type="phone" name="" id="" placeholder="555-555-5555" bind:value={value} > <button class="primary" on:click|preventDefault={handleClick} id="sub">Text Me</button>
+                    <div>{status}</div>
+                </form>
+            </div>
+      <button class="primary desktop" on:click={resumeButton}>View my resume.</button>
         </div>
     
         <div class="circle-3">
@@ -63,11 +99,20 @@
 @import "open-props/masks/edges";
 
 .container{
+
     background-image: var(--gradient-16);
 }
 
 .grp{
     width: 100%;
+}
+
+form{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin-top: var(--size-2);
+gap: var(--size-2);
 }
 
 
@@ -96,8 +141,13 @@ h1{
     font-weight: var(--font-weight-3);
 }
 
+input{
+  padding: var(--size-3);
+}
+
 .photo{
-    width: 40%;
+    width: 34%;
+
     max-width: 500px;
     margin-right: var(--size-10);
     margin-top: var(--size-4);
@@ -197,7 +247,7 @@ h1{
 }
 
     section{
-        max-width: 1500px;
+        max-width: 1200px;
         height: 100vh;
         margin: 0 auto;
         gap: var(--size-4);
@@ -224,20 +274,22 @@ h1{
   padding-block: var(--size-3);
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
-  margin-top: var(--size-3);
+
   user-select: none;
 }
 
-a{
-    user-select: none;
+
+
+br{
+  margin-bottom: var(--size-4);
 }
 
 button.primary {
   background: var(--violet-7);
 font-weight: var(--font-weight-7);
-text-shadow: 0 1px 0 var(--red-2);
+/* text-shadow: 0 1px 0 var(--red-2); */
 color: white;
-border: 4px solid var(--violet-6);
+/* border: 4px solid transparent; */
 }
 
 button.primary:hover {
@@ -390,6 +442,26 @@ button.primary:hover {
     transform: scale(.75);
   }
 }
+
+.desktop{
+  margin-top: var(--size-2);
+  display: block;
+}
+
+.mobile{
+  display: none;
+}
+
+@media only screen and (min-width: 500px) {
+    .desktop{
+      display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+}
+
 
 
 </style>
