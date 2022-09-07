@@ -106,6 +106,7 @@ import Card from "./Card.svelte"
     @import "open-props/colors-hsl";
 *{
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 .con{
@@ -139,14 +140,12 @@ import Card from "./Card.svelte"
 }
 
     section{
+
         background-color: hsl(var(--gray-3-hsl) / 30%);
         background-size: 3000px 3000px;
-        max-width:92%;
         margin: 0 auto;
-
-        
+        overflow: auto;
         padding: var(--size-3);
-
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: var(--size-2);
