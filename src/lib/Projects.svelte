@@ -1,9 +1,12 @@
 <script>
 import Popper from "./popper.svelte";
 import Card from "./Card.svelte"
-</script>
 
-<section>
+</script>
+<section class="backdrop title">
+    <h2>Check out my work</h2>
+</section>
+<section class="backdrop">
    
     <article >
         <div class="info">
@@ -94,6 +97,8 @@ import Card from "./Card.svelte"
 </section>
 
 <style>
+    @import "open-props/colors-hsl";
+
     .dbl{
        grid-column: span 2;
     }
@@ -104,6 +109,11 @@ import Card from "./Card.svelte"
         justify-content: space-between;
     }
 
+    .title{
+        display: flex;
+        justify-content: center;
+    }
+
     .card{
         display: flex;
         flex-direction: column;
@@ -111,8 +121,14 @@ import Card from "./Card.svelte"
 
     }
 
+
+
+.backdrop {
+  background-color: hsl(var(--indigo-9-hsl) / 90%);
+}
+
     section{
-        background-image: var(--gradient-2);
+        background-color: hsl(var(--gray-3-hsl) / 30%);
         background-size: 3000px 3000px;
         max-width: 100vw;
         overflow: hidden;
@@ -125,7 +141,7 @@ import Card from "./Card.svelte"
     }
 
     hr{
-       background-color: var(--violet-7);
+       background-color: var(--indigo-4);
        height: 3px;
        border-radius: var(--border-size-3);
     }
@@ -162,17 +178,18 @@ import Card from "./Card.svelte"
         /* max-width: 2fr; */
     }
 
-    h1{ 
+    h2{ 
         margin: 0;
         padding: 0;
-        width: 100%;
+        /* width: 100%; */
         text-align: center;
-        -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+        color: black;
+        /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
     }
 
     h4{
-        color: var(--violet-2);
+        color: var(--indigo-2);
     }
 
     a{
@@ -191,9 +208,10 @@ import Card from "./Card.svelte"
     }
 
     ul li{
+        color: white;
         list-style: none;
         padding: var(--size-1);
-        background-color: var(--indigo-8);
+        background-color: var(--indigo-6);
         border-radius: var(--border-size-3);
     }
 
