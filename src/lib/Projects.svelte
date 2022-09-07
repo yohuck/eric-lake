@@ -3,105 +3,114 @@ import Popper from "./popper.svelte";
 import Card from "./Card.svelte"
 
 </script>
-<section class="backdrop title">
-    <h2>Check out my work</h2>
-</section>
-<section class="backdrop">
-   
-    <article >
-        <div class="info">
-            <div class="top">
-                <h4>Habit Stack</h4>
-                <hr>
-                <div class="grp">
-                    <a href="https://github.com/yohuck/habit-map" target="_blank">GitHub Repo</a>
-                    <a href="https://habitstack.herokuapp.com/" target="_blank">Live Site</a>
-                </div>
-                <p>A full stack application that helps build habit that stick through repetition and reward.</p>
-            </div>
-            <ul>
-                <li>MySql</li>
-                <li>Express</li>
-                <li>Handlebars</li>
-                <li>Sequelize</li>
-                <li>Node.js</li>
-                <li>Authentication</li>
-            </ul>
-        </div>
-    </article>
-    <article>
-        <div class="info">
-            <div class="top">
-                <h4>Recycle Better</h4>
-                <hr>
-                <div class="grp">
-                    <a target='blank' href="https://github.com/yohuck/wish-cycle">GitHub Repo</a>
-                    <a target="blank" href="https://yohuck.github.io/wish-cycle/">Live Site</a>
-                </div>
-                <p>A web application to help conscious consumers quickly and easily find the best way to recycle or dispose of household items.</p>
-            </div>
-            <ul>
-                <li>JQuery</li>
-                <li>Socrata Open API</li>
-                <li>Geolocation API</li>
-                <li>Bulma</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-    </article>
-    <article>
-        <div class="info">
-            <div class="top">
-                <h4>City Weather</h4>
-                <hr>
-                <div class="grp">
-                    <a target='blank' href="https://github.com/yohuck/city-weather">GitHub Repo</a>
-                    <a target="blank" href="https://yohuck.github.io/city-weather/">Live Site</a>
-                </div>
-                <p>A web application using the OpenWeather API to find and store weather information.</p>
-            </div>
-            <ul>
-                <li>OpenWeather API</li>
-                <li>JavaScript</li>
-                <li>CSS3</li>
-                <li>HTML5</li>
-            </ul>
-        </div>
-    </article>
-    <article class="pop">
-        <div class="info">
-            <h4>Popper Toy</h4>
-            <hr>
-            <div class="grp">
-                <a target='blank' href="https://codepen.io/yohuck/pen/bGaLKaW">Codepen</a>
-            </div>
-        </div>
-        <Popper />
-    </article>
-  
-    <article class="card">
-        <div class="top">
+<!-- <section class="backdrop title">
+    <h2>Check out my work:<br><span></span></h2>
+</section> -->
+<div class="con">
+    <section class="backdrop">
+    
+        <article >
             <div class="info">
-                <h4>Chip Card Button</h4>
+                <div class="top">
+                    <h4>Habit Stack</h4>
+                    <hr>
+                    <div class="grp">
+                        <a href="https://github.com/yohuck/habit-map" target="_blank">GitHub Repo</a>
+                        <a href="https://habitstack.herokuapp.com/" target="_blank">Live Site</a>
+                    </div>
+                    <p>A full stack application that helps build habit that stick through repetition and reward.</p>
+                </div>
+                <ul>
+                    <li>MySql</li>
+                    <li>Express</li>
+                    <li>Handlebars</li>
+                    <li>Sequelize</li>
+                    <li>Node.js</li>
+                    <li>Authentication</li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <div class="info">
+                <div class="top">
+                    <h4>Recycle Better</h4>
+                    <hr>
+                    <div class="grp">
+                        <a target='blank' href="https://github.com/yohuck/wish-cycle">GitHub Repo</a>
+                        <a target="blank" href="https://yohuck.github.io/wish-cycle/">Live Site</a>
+                    </div>
+                    <p>A web application to help conscious consumers quickly and easily find the best way to recycle or dispose of household items.</p>
+                </div>
+                <div class="btm">
+    
+                    <ul>
+                        <li>JQuery</li>
+                        <li>Socrata Open API</li>
+                        <li>Geolocation API</li>
+                        <li>Bulma</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <!-- <img src="../src/assets/a.gif" alt=""> -->
+                            </div>
+                </div>
+        </article>
+        <article>
+            <div class="info">
+                <div class="top">
+                    <h4>City Weather</h4>
+                    <hr>
+                    <div class="grp">
+                        <a target='blank' href="https://github.com/yohuck/city-weather">GitHub Repo</a>
+                        <a target="blank" href="https://yohuck.github.io/city-weather/">Live Site</a>
+                    </div>
+                    <p>A web application using the OpenWeather API to find and store weather information.</p>
+                </div>
+                <ul>
+                    <li>OpenWeather API</li>
+                    <li>JavaScript</li>
+                    <li>CSS3</li>
+                    <li>HTML5</li>
+                </ul>
+            </div>
+        </article>
+        <article class="pop">
+            <div class="info">
+                <h4>Popper Toy</h4>
                 <hr>
                 <div class="grp">
-                    <a target='blank' href="https://codepen.io/yohuck/pen/dyJZXxQ">CodePen</a>
+                    <a target='blank' href="https://codepen.io/yohuck/pen/bGaLKaW">Codepen</a>
                 </div>
             </div>
-        </div>
-        <Card />
-    </article>
-
-
-
-</section>
+            <Popper />
+        </article>
+    
+        <article class="card">
+            <div class="top">
+                <div class="info">
+                    <h4>Chip Card Button</h4>
+                    <hr>
+                    <div class="grp">
+                        <a target='blank' href="https://codepen.io/yohuck/pen/dyJZXxQ">CodePen</a>
+                    </div>
+                </div>
+            </div>
+            <Card />
+        </article>
+    
+    
+    
+    </section>
+</div>
 
 <style>
     @import "open-props/colors-hsl";
+*{
+    box-sizing: border-box;
+}
 
-    .dbl{
-       grid-column: span 2;
-    }
+.con{
+    background-color: hsl(var(--indigo-9-hsl) / 100%);
+}
     .pop{
         display: flex;
         justify-content: center;
@@ -109,10 +118,12 @@ import Card from "./Card.svelte"
         justify-content: space-between;
     }
 
-    .title{
+    .btm{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: flex-end;
     }
+
 
     .card{
         display: flex;
@@ -130,14 +141,15 @@ import Card from "./Card.svelte"
     section{
         background-color: hsl(var(--gray-3-hsl) / 30%);
         background-size: 3000px 3000px;
-        max-width: 100vw;
-        overflow: hidden;
+        max-width:92%;
+        margin: 0 auto;
+
         
         padding: var(--size-3);
-        width: 100%;
+
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-        grid-gap: var(--size-2);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--size-2);
     }
 
     hr{
@@ -146,12 +158,6 @@ import Card from "./Card.svelte"
        border-radius: var(--border-size-3);
     }
 
-    code{
-        max-width: 100%;
-        
-        word-wrap: normal;
-        flex-wrap: wrap;
-    }
 
     p{
 
@@ -167,11 +173,12 @@ import Card from "./Card.svelte"
     article{
         /* background-image: var(--gradient-8); */
         background-color: black;
-        height: 100%;
-        border: 1px solid black;
+        /* height: 100%; */
+        /* border: 1px solid black; */
         border-radius: var(--radius-conditional-3);
-        padding: var(--size-2);
+        padding: var(--size-3);
         box-shadow: var(--shadow-3);
+        margin: 0;
         border: var(--border-size-3) solid transparent;
         color: var(--violet-2);
        
@@ -182,10 +189,19 @@ import Card from "./Card.svelte"
         margin: 0;
         padding: 0;
         /* width: 100%; */
-        text-align: center;
-        color: black;
+        color: var(--indigo-2);
+        background-color: black;
+        border-radius: var(--radius-conditional-3);
+        padding: var(--size-2);
+        box-shadow: var(--shadow-3);
+        border: var(--border-size-3) solid transparent;
+
         /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
+    }
+
+    span{
+        font-size: var(--font-size-2);
     }
 
     h4{
@@ -222,14 +238,7 @@ import Card from "./Card.svelte"
         box-shadow: var(--shadow-4);
     }
 
-    .photo{
-        display: flex;
-    }
 
-    img{
-        width: 100%;
-
-    }
 
     .info{
         height: 100%;
