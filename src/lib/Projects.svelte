@@ -7,13 +7,15 @@ import Card from "./Card.svelte"
    
     <article >
         <div class="info">
-            <h4>Habit Stack</h4>
-            <hr>
-            <div class="grp">
-                <a href="https://github.com/yohuck/habit-map" target="_blank">GitHub Repo</a>
-                <a href="https://habitstack.herokuapp.com/" target="_blank">Live Site</a>
+            <div class="top">
+                <h4>Habit Stack</h4>
+                <hr>
+                <div class="grp">
+                    <a href="https://github.com/yohuck/habit-map" target="_blank">GitHub Repo</a>
+                    <a href="https://habitstack.herokuapp.com/" target="_blank">Live Site</a>
+                </div>
+                <p>A full stack application that helps build habit that stick through repetition and reward.</p>
             </div>
-            <p>A full stack application that helps build habit that stick through repetition and reward.</p>
             <ul>
                 <li>MySql</li>
                 <li>Express</li>
@@ -26,16 +28,18 @@ import Card from "./Card.svelte"
     </article>
     <article>
         <div class="info">
-            <h4>Recycle Better</h4>
-            <hr>
-            <div class="grp">
-                <a target='blank' href="https://github.com/yohuck/wish-cycle">GitHub Repo</a>
-                <a target="blank" href="https://yohuck.github.io/wish-cycle/">Live Site</a>
+            <div class="top">
+                <h4>Recycle Better</h4>
+                <hr>
+                <div class="grp">
+                    <a target='blank' href="https://github.com/yohuck/wish-cycle">GitHub Repo</a>
+                    <a target="blank" href="https://yohuck.github.io/wish-cycle/">Live Site</a>
+                </div>
+                <p>A web application to help conscious consumers quickly and easily find the best way to recycle or dispose of household items.</p>
             </div>
-            <p>A web application to help conscious consumers quickly and easily find the best way to recycle or dispose of household items.</p>
             <ul>
                 <li>JQuery</li>
-                <li>Socrate Open API</li>
+                <li>Socrata Open API</li>
                 <li>Geolocation API</li>
                 <li>Bulma</li>
                 <li>JavaScript</li>
@@ -44,13 +48,15 @@ import Card from "./Card.svelte"
     </article>
     <article>
         <div class="info">
-            <h4>City Weather</h4>
-            <hr>
-            <div class="grp">
-                <a target='blank' href="https://github.com/yohuck/city-weather">GitHub Repo</a>
-                <a target="blank" href="https://yohuck.github.io/city-weather/">Live Site</a>
+            <div class="top">
+                <h4>City Weather</h4>
+                <hr>
+                <div class="grp">
+                    <a target='blank' href="https://github.com/yohuck/city-weather">GitHub Repo</a>
+                    <a target="blank" href="https://yohuck.github.io/city-weather/">Live Site</a>
+                </div>
+                <p>A web application using the OpenWeather API to find and store weather information.</p>
             </div>
-            <p>A web application using the OpenWeather API to find and store weather information.</p>
             <ul>
                 <li>OpenWeather API</li>
                 <li>JavaScript</li>
@@ -71,11 +77,13 @@ import Card from "./Card.svelte"
     </article>
   
     <article class="card">
-        <div class="info">
-            <h4>Chip Card Button</h4>
-            <hr>
-            <div class="grp">
-                <a target='blank' href="https://codepen.io/yohuck/pen/dyJZXxQ">CodePen</a>
+        <div class="top">
+            <div class="info">
+                <h4>Chip Card Button</h4>
+                <hr>
+                <div class="grp">
+                    <a target='blank' href="https://codepen.io/yohuck/pen/dyJZXxQ">CodePen</a>
+                </div>
             </div>
         </div>
         <Card />
@@ -143,13 +151,14 @@ import Card from "./Card.svelte"
     article{
         /* background-image: var(--gradient-8); */
         background-color: black;
-        
+        height: 100%;
         border: 1px solid black;
         border-radius: var(--radius-conditional-3);
         padding: var(--size-2);
         box-shadow: var(--shadow-3);
-        border: var(--border-size-3) solid transparent                      ;
-        color: var(--violet-2)
+        border: var(--border-size-3) solid transparent;
+        color: var(--violet-2);
+       
         /* max-width: 2fr; */
     }
 
@@ -171,9 +180,21 @@ import Card from "./Card.svelte"
         padding: 0;
     }
 
-    .grp{
-        padding: 2px solid red;
+
+    ul{
+        width: 100%;
+        flex-wrap: wrap;
         margin: 0;
+        padding: 0;
+        display: flex;
+        gap: var(--size-1);
+    }
+
+    ul li{
+        list-style: none;
+        padding: var(--size-1);
+        background-color: var(--indigo-8);
+        border-radius: var(--border-size-3);
     }
 
 
@@ -190,5 +211,12 @@ import Card from "./Card.svelte"
     img{
         width: 100%;
 
+    }
+
+    .info{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 </style>

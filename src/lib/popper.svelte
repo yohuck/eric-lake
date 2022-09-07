@@ -1,78 +1,134 @@
+
+<script>
+
+  let time= 0;
+  let paused=true
+
+  const pop = (e) => {
+    console.log(e.target.classList)
+    paused= false
+    time = 0
+    if (e.target.classList.contains('active')){
+      e.target.classList.remove('active');
+//            
+          } else {
+           e.target.classList.add('active');
+//                  
+        }
+  }
+
+
+
+  // creates an array of all the poppers
+// let switches = document.querySelectorAll('.popper');
+   
+
+//    // initializes the audio
+//    let audio = document.getElementById('pop');
+   
+//    // adds event listeners to all the poppers
+//    for (var i = 0; i < switches.length; i++){
+//        switches[i].addEventListener('click', function(e){
+//          // adds/removed active class & plays audio then sets time = zero so audio can play again.
+//           if (this.classList.contains('active')){
+//              this.classList.remove('active');
+//              audio.currentTime = 0;
+//              audio.play();
+//              audio.currentTime = 0;
+//           } else {
+//              this.classList.add('active');
+//              audio.currentTime = 0;
+//              audio.play();
+//              audio.currentTime = 0;        
+//           }
+//        })
+//    };
+   
+</script>
+
+
 <section>
-    <audio  class='audio' id="pop" src="https://assets.codepen.io/7784266/sfx-pop5.mp3"></audio>
+    <audio  
+    class='audio' 
+    id="pop" 
+    src="https://assets.codepen.io/7784266/sfx-pop5.mp3"
+    bind:currentTime={time}
+    bind:paused>
+  </audio>
   <!--   audio. from https://www.fiftysounds.com/royalty-free-music/sfx-pop5.html -->
     <div class="outer">
       <div class="row">
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
       </div>
       <div class="row">
-       <div class="popper">
+       <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
        
         
       </div>
       <div class="row">
-       <div class="popper">
+       <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
       </div>
       <div class="row">
-       <div class="popper">
+       <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>   
       </div>
       <div class="row">
-     <div class="popper">
+     <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
       </div>
       <div class="row final">
-       <div class="popper">
+       <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
-        <div class="popper">
+        <div class="popper" on:click={pop}>
         </div>
       </div>
     </div>
+    <div class="hr active"></div>
 </section>
 
 <style>
@@ -116,10 +172,10 @@
   cursor: pointer;
 }
 
-.active {
-background: radial-gradient(#442ce0, #31b74a 82%);
-  box-shadow: inset 0px 0px 2px rgba(0,0,0,0.3);
-  filter:none;
-  opacity: 0.75;
+.active{
+  background: var(--gradient-11);
+  filter: drop-shadow(0px 0px 2rem #a425a2);
 }
+
+
 </style>
