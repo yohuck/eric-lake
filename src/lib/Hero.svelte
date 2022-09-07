@@ -60,8 +60,8 @@ let value = ''
             <p class="welcome-text">I'm a front-end developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> UI.
                I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
               
-               <p class="welcome-text">
-                Want to check out my resume? Download it <a download href=".\public\images\EricLakeResume.pdf">here</a>.
+               <p class="welcome-text mobile">
+                Want to check out my resume? View it <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/">here</a>.
             </p>
             <br>
             <div class="mobile">
