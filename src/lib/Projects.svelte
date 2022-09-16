@@ -33,6 +33,27 @@ import Card from "./Card.svelte"
         <article>
             <div class="info">
                 <div class="top">
+                    <h4>API Resume</h4>
+                    <hr>
+                    <div class="grp">
+                        <a target='blank' href="https://github.com/yohuck/api-resume">GitHub Repo</a>
+                        <a target="blank" href="https://eric-lake-api-resume.vercel.app/">Live Site</a>
+                    </div>
+                    <p>Check out my docs, then fetch my resume as a REST API</p>
+                </div>
+                <ul>
+                    <li>MongoDB</li>
+                    <li>Mongoose</li>
+                    <li>AWS Cluster</li>
+                    <li>Vercel + Serverless Functions</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <div class="info">
+                <div class="top">
                     <h4>Recycle Better</h4>
                     <hr>
                     <div class="grp">
@@ -73,17 +94,6 @@ import Card from "./Card.svelte"
                 </ul>
             </div>
         </article>
-        <article class="pop">
-            <div class="info">
-                <h4>Popper Toy</h4>
-                <hr>
-                <div class="grp">
-                    <a target='blank' href="https://codepen.io/yohuck/pen/bGaLKaW">Codepen</a>
-                </div>
-            </div>
-            <Popper />
-        </article>
-    
         <article class="card">
             <div class="top">
                 <div class="info">
@@ -96,6 +106,21 @@ import Card from "./Card.svelte"
             </div>
             <Card />
         </article>
+        
+        <article class="pop">
+            <div class="top">
+                <div class="info">
+                    <h4>Popper Toy</h4>
+                    <hr>
+                    <div class="grp">
+                        <a target='blank' href="https://codepen.io/yohuck/pen/bGaLKaW">Codepen</a>
+                    </div>
+                </div>
+            </div>
+            <Popper />
+        </article>
+    
+
     
     
     
@@ -121,16 +146,20 @@ import Card from "./Card.svelte"
 
     .btm{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-end;
     }
 
 
-    .card{
+    .card, .pop{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
+    }
+
+    article{
+        /* aspect-ratio: 1; */
     }
 
 
@@ -140,14 +169,15 @@ import Card from "./Card.svelte"
 }
 
     section{
-
         background-color: hsl(var(--gray-3-hsl) / 30%);
         background-size: 3000px 3000px;
-        margin: 0 auto;
-        overflow: auto;
+        margin: 0;
+        /* overflow: auto; */
         padding: var(--size-3);
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        /* grid-auto-columns: minmax(300px,1fr);
+        grid-auto-flow: column; */
         gap: var(--size-2);
     }
 

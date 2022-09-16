@@ -27,7 +27,8 @@
   <style>
 
 .cont   {
-    display: flex;
+    display: grid;
+    place-items: center;
     padding: var(--size-1);
 
 }
@@ -43,7 +44,7 @@
     margin: var(--size-5);
   /* transform: rotate(90deg); */
   border-left: 10px solid  var(--violet-3);
-  width: 19rem;
+  /* width: 19rem; */
   overflow: hidden;
   border-radius:2px;
 }
