@@ -175,7 +175,7 @@ import Card from "./Card.svelte"
         /* overflow: auto; */
         padding: var(--size-3);
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         /* grid-auto-columns: minmax(300px,1fr);
         grid-auto-flow: column; */
         gap: var(--size-2);
