@@ -262,13 +262,6 @@ import Card from "./Card.svelte"
 
 
 
-    article:hover, article:focus{
-        border: var(--border-size-3) solid var(--red-6 );              
-        box-shadow: var(--shadow-4);
-    }
-
-
-
     .info{
         height: 100%;
         display: flex;
