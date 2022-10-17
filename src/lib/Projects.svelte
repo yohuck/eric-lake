@@ -167,16 +167,16 @@ import Card from "./Card.svelte"
                 </div>
                 <ul>
                     <a href="https://github.com/yohuck" target="_blank">
-                        <li><i class="fa-brands fa-github fa-lg clr keyf"></i></li>
+                        <li><i class="fa-brands fa-github fa-lg clr keyf" alt="github"></i></li>
                     </a>
                     <a href="https://linkedin.com/in/eric-lake" target="_blank">
-                    <li><i class="fa-brands fa-linkedin fa-lg clr keyf"></i></li>
+                    <li><i class="fa-brands fa-linkedin fa-lg clr keyf" alt="linkedin"></i></li>
                     </a>
                     <a href="mailto:ericallenlake@gmail.com" target="_blank">
-                    <li><i class="fa-duotone fa-envelope fa-lg clr keyf"></i></li>
+                    <li><i class="fa-duotone fa-envelope fa-lg clr keyf" alt="email"></i></li>
                         </a>
                         <a href="https://twitter.com/itsyohuck" target="_blank">
-                    <li><i class="fa-brands fa-twitter fa-lg clr keyf"></i></li>
+                    <li><i class="fa-brands fa-twitter fa-lg clr keyf" alt="twitter"></i></li>
                     </a>
                 </ul>
             </div>
