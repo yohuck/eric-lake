@@ -7,8 +7,29 @@ import Card from "./Card.svelte"
     <h2>Check out my work:<br><span></span></h2>
 </section> -->
 <div class="con">
-    <section class="backdrop">
     
+    <section class="backdrop">
+        <article >
+            <div class="info">
+                <div class="top">
+                    <h4>Talking Cents</h4>
+                    <hr>
+                    <div class="grp">
+                        <a href="https://github.com/yohuck/daily-chatter" target="_blank">GitHub Repo</a>
+                        <a href="https://talking-cents.com/" target="_blank">Live Site</a>
+                    </div>
+                    <p>Talking Cents is a social platform that puts your opinions to the test to see how much sense (cents) you really make..</p>
+                </div>
+                <ul>
+                    <li>RedwoodJs</li>
+                    <li>React</li>
+                    <li>TailwindCSS</li>
+                    <li>PostgreSQL</li>
+                    <li>GraphQL</li>
+                    <li>Prisma</li>
+                </ul>
+            </div>
+        </article>
         <article >
             <div class="info">
                 <div class="top">
@@ -30,6 +51,25 @@ import Card from "./Card.svelte"
                 </ul>
             </div>
         </article>
+
+        <!-- <article >
+            <div class="info">
+                <div class="top">
+                    <h4>React Portfolio</h4>
+                    <hr>
+                    <div class="grp">
+                        <a href="https://github.com/yohuck/react-portfolio" target="_blank">GitHub Repo</a>
+                        <a href="https://react-portfolio-yohuck.vercel.app/" target="_blank">Live Site</a>
+                    </div>
+                    <p>It's pretty much the same portfolio, but built in React!</p>
+                </div>
+                <ul>
+                    <li>React</li>
+                    <li>OpenProps</li>
+                    <li>EmailJs</li>
+                </ul>
+            </div>
+        </article> -->
         <article>
             <div class="info">
                 <div class="top">
@@ -47,7 +87,6 @@ import Card from "./Card.svelte"
                     <li>AWS Cluster</li>
                     <li>Vercel + Serverless Functions</li>
                     <li>Node.js</li>
-                    <li>Express</li>
                 </ul>
             </div>
         </article>
@@ -119,6 +158,29 @@ import Card from "./Card.svelte"
             </div>
             <Popper />
         </article>
+        <article>
+            <div class="info">
+                <div class="top">
+                    <h4>Contact Me</h4>
+                    <hr>
+                    <p>Let's connect! I'm currently open to full time and freelance projects remotely and in the Denver, CO area.</p>
+                </div>
+                <ul>
+                    <a href="https://github.com/yohuck" target="_blank">
+                        <li><i class="fa-brands fa-github fa-lg clr keyf"></i></li>
+                    </a>
+                    <a href="https://linkedin.com/in/eric-lake" target="_blank">
+                    <li><i class="fa-brands fa-linkedin fa-lg clr keyf"></i></li>
+                    </a>
+                    <a href="mailto:ericallenlake@gmail.com" target="_blank">
+                    <li><i class="fa-duotone fa-envelope fa-lg clr keyf"></i></li>
+                        </a>
+                        <a href="https://twitter.com/itsyohuck" target="_blank">
+                    <li><i class="fa-brands fa-twitter fa-lg clr keyf"></i></li>
+                    </a>
+                </ul>
+            </div>
+        </article>
     
 
     
@@ -132,6 +194,16 @@ import Card from "./Card.svelte"
 *{
     box-sizing: border-box;
     /* border: 1px solid red; */
+}
+
+ul a li i:hover{
+    color: var(--indigo-1)
+}
+ul a li i{
+    padding: var(--size-2);
+}
+ul a li{
+    margin-top: var(--size-8);
 }
 
 .con{

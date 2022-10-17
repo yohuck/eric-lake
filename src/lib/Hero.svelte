@@ -6,6 +6,8 @@
     let results = [ui, customer]
     let choices = [uiChoices, customerChoices]
 
+
+
     const resumeButton = () => {
         window.open('https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/', '_blank');
     }
@@ -13,7 +15,6 @@
 
 let value = ''
     const handleClick = async () => {
-    console.log(value)
     
     
     const response = await fetch('https://svelte-sms-8332.twil.io/sms', {
@@ -73,7 +74,7 @@ let value = ''
                     <div>{status}</div>
                 </form>
             </div>
-      <button class="primary desktop" on:click={resumeButton}>View my resume.</button>
+      <div class="sides"><button class="primary desktop" on:click={resumeButton}>View my resume.</button><i class="fa-duotone fa-chevron-down fa-2xl clr keyf"></i></div>
         </div>
     
         <div class="circle-3">
@@ -105,6 +106,10 @@ let value = ''
 
 .grp{
     width: 100%;
+}
+
+.clr{
+  color: var(--indigo-8);
 }
 
 form{
@@ -205,6 +210,10 @@ input{
 
     }
 
+    .keyf{
+      animation: keyf 1s linear 0s infinite running none;
+    }
+
     /* .circle-4{
         transform: translateY(30%) rotate(10deg);
         border-radius: 999px;
@@ -233,6 +242,12 @@ input{
         /* background-color: var(--gray-9); */
         color: var(--violet-7);
         font-weight: var(--font-weight-9);
+    }
+
+    .sides{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .ayo1{
   
@@ -314,6 +329,19 @@ button.primary:hover {
     100% {
         background-position: 00px -00px;
     }
+}
+
+@keyframes keyf{
+  0% {
+    transform: translateY(-1vh)
+  }
+
+  50% {
+    transform: translateY(1vh)
+  }
+  100% {
+    transform: translateY(-1vh)
+  }
 }
 
 @keyframes round{
@@ -459,6 +487,10 @@ button.primary:hover {
 
     .mobile{
         display: block;
+    }
+
+    .clr{
+      margin-top: 3rem;
     }
 }
 
