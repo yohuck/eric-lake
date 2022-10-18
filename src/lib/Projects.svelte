@@ -6,7 +6,7 @@ import Card from "./Card.svelte"
 <!-- <section class="backdrop title">
     <h2>Check out my work:<br><span></span></h2>
 </section> -->
-<div class="con">
+<div class="con" id="work">
     
     <section class="backdrop">
         <article >

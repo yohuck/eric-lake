@@ -74,7 +74,7 @@ let value = ''
                     <div>{status}</div>
                 </form>
             </div>
-      <div class="sides"><button class="primary desktop" on:click={resumeButton}>View my resume.</button><i class="fa-duotone fa-chevron-down fa-2xl clr keyf"></i></div>
+      <div class="sides"><button class="primary desktop" on:click={resumeButton}>View my resume.</button><a href="#work"><i class="fa-duotone fa-chevron-down fa-2xl clr keyf"></i></a></div>
         </div>
     
         <div class="circle-3">
