@@ -12,6 +12,29 @@ import Card from "./Card.svelte"
         <article >
             <div class="info">
                 <div class="top">
+                    <h4>PageRace</h4>
+                    <hr>
+                    <div class="grp">
+                        <a href="https://github.com/yohuck/pagerace" target="_blank">GitHub Repo</a>
+                        <a href="https://pagerace.vercel.app/" target="_blank">Live Site</a>
+                    </div>
+                    <p>A full stack web appliation for tracking your reading habits and competing against others in friendly competition.</p>
+                </div>
+                <ul>
+                    <li>T3 Stack</li>
+                    <li>React</li>
+                    <li>TailwindCSS</li>
+                    <li>TypeScript</li>
+                    <li>tRPC</li>
+                    <li>Prisma</li>
+                    <li>NextJS</li>
+                    <li>PlanetScale</li>
+                </ul>
+            </div>
+        </article>
+        <article >
+            <div class="info">
+                <div class="top">
                     <h4>Talking Cents</h4>
                     <hr>
                     <div class="grp">
@@ -114,7 +137,7 @@ import Card from "./Card.svelte"
                             </div>
                 </div>
         </article>
-        <article>
+        <!-- <article>
             <div class="info">
                 <div class="top">
                     <h4>City Weather</h4>
@@ -132,7 +155,7 @@ import Card from "./Card.svelte"
                     <li>HTML5</li>
                 </ul>
             </div>
-        </article>
+        </article> -->
         <article class="card">
             <div class="top">
                 <div class="info">
