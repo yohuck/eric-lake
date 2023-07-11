@@ -58,7 +58,7 @@ let value = ''
             <h1 class="welcome-hero">
               Howdy, friend.<span class="second"> <br> I'm Eric</span>.
             </h1>
-            <p class="welcome-text">I'm a full stack who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> web applications.
+            <p class="welcome-text">I'm a full stack developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> web applications.
                <br>
                <br>
               I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
