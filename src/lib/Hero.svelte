@@ -67,15 +67,7 @@ let value = ''
                 Want to check out my resume? View it <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/">here</a>.
             </p>
             <br>
-            <div class="mobile">
-                <p class="welcome-text">
-                    All of my work is implemented mobile-first. Want to view on your phone?
-                </p>
-                <form action="" method="">
-                    <input type="phone" name="" id="" placeholder="555-555-5555" bind:value={value} > <button class="primary" on:click|preventDefault={handleClick} id="sub">Text Me</button>
-                    <div>{status}</div>
-                </form>
-            </div>
+
       <div class="sides"><button class="primary desktop" on:click={resumeButton}>View my resume.</button><a href="#work"><i class="fa-duotone fa-chevron-down fa-2xl clr keyf"></i></a></div>
         </div>
     
