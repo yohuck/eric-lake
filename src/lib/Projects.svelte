@@ -60,7 +60,6 @@ import Card from "./Card.svelte"
                     <hr>
                     <div class="grp">
                         <a href="https://github.com/yohuck/habit-map" target="_blank">GitHub Repo</a>
-                        <a href="https://habitstack.herokuapp.com/" target="_blank">Live Site</a>
                     </div>
                     <p>A full stack application that helps build habit that stick through repetition and reward.</p>
                 </div>
