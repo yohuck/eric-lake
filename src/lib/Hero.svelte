@@ -1,56 +1,82 @@
 <script>
-    let ui = '';
-    let uiChoices = ['b','bo','bol','bold', 'bold','bold', 'bold', 'i', 'in', 'inv', 'invi', 'invit', 'inviti', 'invitin', 'inviting', 'inviting', 'inviting', 'inviting', 'a', 'ac','acc','acce','acces','access','accessi','accessib','accessibl','accessible', 'accessible','accessible', 'accessible','w','wh','whi','whim','whims','whimsi','whimsic','whimsica','whimsical', 'whimsical','whimsical', 'whimsical','e','ef','eff','effe','effec','effect','effecti','effectiv','effective', 'effective','effective', 'effective']
-    let customer = '';
-    let customerChoices = ['c','cu','cus','cust','custo','custom','custome','customer','customer','customer','customer','customer','customer', 'u', 'us','use','user','user','user','user','user','c','cl','cli','clie','clien','client','client','client','client','client', 'p', 'pa', 'par', 'part', 'partn', 'partne', 'partner', 'partner', 'partner', 'partner', 'partner', 'partner']
-    let results = [ui, customer]
-    let choices = [uiChoices, customerChoices]
+  import { onDestroy } from 'svelte';
+  
+  const resumeButton = () => {
+      window.open('https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/', '_blank');
+  }
+  function startTypewriter(setter, words, opts = {}) {
+    const {
+      typeDelay = 120,
+      eraseDelay = 60,
+      hold = 800,
+      gap = 300,
+      loop = true
+    } = opts;
 
+    let wordIndex = 0;
+    let charIndex = 0;
+    let erasing = false;
+    let handle = null;
+    let stopped = false;
 
+    const step = () => {
+      if (stopped) return;
 
-    const resumeButton = () => {
-        window.open('https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/', '_blank');
-    }
-    let status = '';
+      const word = words[wordIndex];
 
-let value = ''
-    const handleClick = async () => {
-    
-    
-    const response = await fetch('https://svelte-sms-8332.twil.io/sms', {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            to: value,
-            message: 'Thanks for checking out my portfolio! http://www.ericallenlake.com -E'
-        })
-    });
-    
-    const data = await response.json();
-    // status = data.status;
-    value = 'Check your phone!'
-    }
+      if (!erasing) {
+        charIndex++;
+        setter(word.slice(0, charIndex));
+        if (charIndex === word.length) {
+          erasing = true;
+          handle = setTimeout(step, hold);
+        } else {
+          handle = setTimeout(step, typeDelay);
+        }
+      } else {
+        charIndex--;
+        setter(word.slice(0, Math.max(charIndex, 0)));
+        if (charIndex === 0) {
+          erasing = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          if (!loop && wordIndex === 0) return;
+          handle = setTimeout(step, gap);
+        } else {
+          handle = setTimeout(step, eraseDelay);
+        }
+      }
+    };
 
-    const ticker = (index) => {
-        let choice = 0
-        results[index] = choices[index][choice]
-        setInterval(() => {
-            choice++
-            if (choice > choices[index].length - 1){
-                choice = 0;
-            }
-           results[index] = choices[index][choice]
-   
-        }, 200);
-    }
+    step();
 
-    for (let i = 0; i < results.length; i++){
-        ticker(i)
-    }
+    return () => {
+      stopped = true;
+      if (handle) clearTimeout(handle);
+    };
+  }
+
+  let uiText = '';
+  let audienceText = '';
+
+  const stopUi = startTypewriter(
+    v => (uiText = v),
+    ['bold', 'inviting', 'accessible', 'whimsical', 'effective'],
+    { typeDelay: 90, eraseDelay: 45, hold: 900 }
+  );
+
+  const stopAudience = startTypewriter(
+    v => (audienceText = v),
+    ['customer', 'user', 'client', 'partner'],
+    { typeDelay: 80, eraseDelay: 40, hold: 700 }
+  );
+
+  onDestroy(() => {
+    stopUi && stopUi();
+    stopAudience && stopAudience();
+  });
 </script>
+
+
 
 <div class="container">
     <section>
@@ -58,10 +84,15 @@ let value = ''
             <h1 class="welcome-hero">
               Howdy, friend.<span class="second"> <br> I'm Eric</span>.
             </h1>
-            <p class="welcome-text">I'm a full stack developer who loves building <span aria-label="bold, inviting, accessible, inviting, whimsical, effective"></span><span class="descrip" aria-hidden="true" >{results[0]}</span> web applications.
+            <p class="welcome-text">
+              I'm a full stack developer who loves building
+              <!-- Screen readers get the stable list; animation text below is aria-hidden -->
+              <span aria-label="bold, inviting, accessible, whimsical, effective"></span>
+              <span class="descrip" aria-hidden="true">{uiText}</span>
+              web applications.
+            </p>
                <br>
-               <br>
-              I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen. </p>
+              I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen.
               
                <p class="welcome-text mobile">
                 Want to check out my resume? View it <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/">here</a>.

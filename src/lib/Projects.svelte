@@ -12,6 +12,25 @@ import Card from "./Card.svelte"
         <article >
             <div class="info">
                 <div class="top">
+                    <h4>Oh Hey Cool Thanks</h4>
+                    <hr>
+                    <div class="grp">
+                        <a href="https://www.ohheycoolthanks.com/" target="_blank">Live Site</a>
+                    </div>
+                    <p>A web application for posting beauty industry classifieds</p>
+                </div>
+                <ul>
+                    <li>NextJS</li>
+                    <li>TailwindCSS</li>
+                    <li>TypeScript</li>
+                    <li>Supabase</li>
+                    <li>Resend</li>
+                </ul>
+            </div>
+        </article>
+        <article >
+            <div class="info">
+                <div class="top">
                     <h4>PageRace</h4>
                     <hr>
                     <div class="grp">
@@ -39,7 +58,6 @@ import Card from "./Card.svelte"
                     <hr>
                     <div class="grp">
                         <a href="https://github.com/yohuck/daily-chatter" target="_blank">GitHub Repo</a>
-                        <a href="https://talking-cents.com/" target="_blank">Live Site</a>
                     </div>
                     <p>Talking Cents is a social platform that puts your opinions to the test to see how much sense (cents) you really make..</p>
                 </div>
@@ -73,25 +91,6 @@ import Card from "./Card.svelte"
                 </ul>
             </div>
         </article>
-
-        <!-- <article >
-            <div class="info">
-                <div class="top">
-                    <h4>React Portfolio</h4>
-                    <hr>
-                    <div class="grp">
-                        <a href="https://github.com/yohuck/react-portfolio" target="_blank">GitHub Repo</a>
-                        <a href="https://react-portfolio-yohuck.vercel.app/" target="_blank">Live Site</a>
-                    </div>
-                    <p>It's pretty much the same portfolio, but built in React!</p>
-                </div>
-                <ul>
-                    <li>React</li>
-                    <li>OpenProps</li>
-                    <li>EmailJs</li>
-                </ul>
-            </div>
-        </article> -->
         <article>
             <div class="info">
                 <div class="top">
@@ -119,7 +118,6 @@ import Card from "./Card.svelte"
                     <hr>
                     <div class="grp">
                         <a target='blank' href="https://github.com/yohuck/wish-cycle">GitHub Repo</a>
-                        <a target="blank" href="https://yohuck.github.io/wish-cycle/">Live Site</a>
                     </div>
                     <p>A web application to help conscious consumers quickly and easily find the best way to recycle or dispose of household items.</p>
                 </div>
@@ -136,25 +134,7 @@ import Card from "./Card.svelte"
                             </div>
                 </div>
         </article>
-        <!-- <article>
-            <div class="info">
-                <div class="top">
-                    <h4>City Weather</h4>
-                    <hr>
-                    <div class="grp">
-                        <a target='blank' href="https://github.com/yohuck/city-weather">GitHub Repo</a>
-                        <a target="blank" href="https://yohuck.github.io/city-weather/">Live Site</a>
-                    </div>
-                    <p>A web application using the OpenWeather API to find and store weather information.</p>
-                </div>
-                <ul>
-                    <li>OpenWeather API</li>
-                    <li>JavaScript</li>
-                    <li>CSS3</li>
-                    <li>HTML5</li>
-                </ul>
-            </div>
-        </article> -->
+    
         <article class="card">
             <div class="top">
                 <div class="info">
@@ -189,16 +169,19 @@ import Card from "./Card.svelte"
                 </div>
                 <ul>
                     <a href="https://github.com/yohuck" target="_blank">
-                        <li><i class="fa-brands fa-github fa-lg clr keyf" alt="github"></i></li>
+                        <li>GitHub</li>
                     </a>
                     <a href="https://linkedin.com/in/eric-lake" target="_blank">
-                    <li><i class="fa-brands fa-linkedin fa-lg clr keyf" alt="linkedin"></i></li>
+                    <li>LinkedIn</li>
+                    </a>
+                    <a href="https://www.tiktok.com/@eric.lake" target="_blank">
+                    <li>TikTok</li>
                     </a>
                     <a href="mailto:ericallenlake@gmail.com" target="_blank">
-                    <li><i class="fa-duotone fa-envelope fa-lg clr keyf" alt="email"></i></li>
+                    <li>Email</li>
                         </a>
                         <a href="https://twitter.com/itsyohuck" target="_blank">
-                    <li><i class="fa-brands fa-twitter fa-lg clr keyf" alt="twitter"></i></li>
+                    <li>X</li>
                     </a>
                 </ul>
             </div>
