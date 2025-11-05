@@ -91,15 +91,14 @@
               <span class="descrip" aria-hidden="true">{uiText}</span>
               web applications.
             </p>
-               <br>
+            <p class="welcome-text">
               I spent the first decade of my career building <span class="ayo1">customer</span> processes and have become an expert in the people on the other side of the screen.
-              
-               <p class="welcome-text mobile">
-                Want to check out my resume? View it <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/">here</a>.
             </p>
-            <br>
+            <p class="welcome-text mobile">
+              Want to check out my resume? View it <a target="_blank" href="https://docs.google.com/document/d/1NHRPvw4y2NBZ1Rd52Dm9ek9CZjjWjDPKq7od_7C7JN4/">here</a>.
+            </p>
 
-      <div class="sides"><button class="primary desktop" on:click={resumeButton}>View my resume.</button><a href="#work"><i class="fa-duotone fa-chevron-down fa-2xl clr keyf"></i></a></div>
+            <div class="sides"><button class="primary desktop" on:click={resumeButton}>View my resume.</button><a href="#work"><i class="fa-duotone fa-chevron-down fa-2xl clr keyf"></i></a></div>
         </div>
     
         <div class="circle-3">
@@ -166,10 +165,10 @@ h1{
     position: relative;
     color: var(--red-0);
     word-wrap: break-word;
-    line-height: var(--font-lineheight-2);
-    font-size: var(--font-size-2);
-    font-weight: var(--font-weight-3);
-    
+    line-height: var(--font-lineheight-3);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-4);
+    margin-bottom: var(--size-4);
 }
 
 input{
@@ -259,15 +258,13 @@ input{
     } */
 
     .descrip{
-  
         animation-duration: 5s;
-
-        text-align: center;
+        text-align: left;
         display: inline-block;
-        width: 9ch;
-        /* background-color: var(--gray-9); */
+        min-width: 9ch;
         color: var(--violet-7);
-        font-weight: var(--font-weight-9);
+        font-weight: var(--font-weight-7);
+        font-size: var(--font-size-3);
     }
 
     .sides{
@@ -276,15 +273,13 @@ input{
       align-items: center;
     }
     .ayo1{
-  
   animation-duration: 5s;
-
-  text-align: center;
+  text-align: left;
   display: inline-block;
-  width: 8ch;
-  /* background-color: var(--gray-9); */
+  min-width: 8ch;
   color: var(--violet-7);
-  font-weight: var(--font-weight-9);
+  font-weight: var(--font-weight-7);
+  font-size: var(--font-size-3);
 }
 
     section{
